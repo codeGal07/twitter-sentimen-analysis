@@ -6,10 +6,10 @@ import datetime
 def get_twitter_data(username, startDate, endDate):
     # twitter stuff
     # you get it from https://developer.twitter.com/
-    consumerKey = "****"
-    consumerSecret = "****"
-    accessToken = "****"
-    accessTokenSecret = "****"
+    consumerKey = "yourkeyhere"
+    consumerSecret = "yourkeyhere"
+    accessToken = "yourkeyhere"
+    accessTokenSecret = "yourkeyhere"
 
     auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
     auth.set_access_token(accessToken, accessTokenSecret)
