@@ -52,6 +52,7 @@ def edit_text(text):
     text = EditText.change_unicode_sumniki_to_text(text)
     text = EditText.change_unicode_emoji_to_text(text)
     text = EditText.remove_url(text)
+    text = EditText.remove_mentions(text)
     return text
 
 

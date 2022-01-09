@@ -72,3 +72,8 @@ class EditText:
         # remove url
         text = re.sub(r'http.?://[^\s]+[\s]?', '', text)
         return text
+
+    def remove_mentions(text):
+        # remove mentions
+        text = re.sub(r'@\w+', '', text)
+        return text
