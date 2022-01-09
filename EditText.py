@@ -77,3 +77,11 @@ class EditText:
         # remove mentions
         text = re.sub(r'@\w+', '', text)
         return text
+
+    def remove_numbers_and_other_signs(text):
+        text = text.replace("b'", "")
+        text = text.replace("RT ", "")
+        text = re.sub('[\'?|.,():;>=<#$%&*+_}{1234567890]', '', text)
+        text = text.replace("-", "")
+        text = text.replace('\\n', " ")
+        return text
