@@ -49,8 +49,9 @@ def get_twitter_data(username, startDate, endDate):
 
 
 def edit_text(text):
-    text = EditText.edit_text_sumniki(text)
-    text = EditText.edit_text_emoji(text)
+    text = EditText.change_unicode_sumniki_to_text(text)
+    text = EditText.change_unicode_emoji_to_text(text)
+    text = EditText.remove_url(text)
     return text
 
 

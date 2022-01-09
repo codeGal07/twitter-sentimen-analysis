@@ -1,5 +1,7 @@
+import re
+
 class EditText:
-    def edit_text_sumniki(text):
+    def change_unicode_sumniki_to_text(text):
         # šumniki converted in chars
         text = text.replace("\\xc5\\xa1", "š")
         text = text.replace("\\xc4\\x8d", "č")
@@ -7,7 +9,7 @@ class EditText:
         return text
 
 
-    def edit_text_emoji(text):
+    def change_unicode_emoji_to_text(text):
         # unicode emojis converted to words
         text = text.replace("\\xf0\\x9f\\x98\\x87", "smile ")
         text = text.replace("\\xf0\\x9F\\x98\\x88", "evil happy ")
@@ -64,5 +66,9 @@ class EditText:
         text = text.replace("\\xf0\\x9f\\x98\\xb3", "flushed ")
         text = text.replace("\\xf0\\x9f\\x98\\xb5", "dizzy ")
         text = text.replace("\\xf0\\x9f\\x98\\xb7", "mask ")
+        return text
 
+    def remove_url(text):
+        # remove url
+        text = re.sub(r'http.?://[^\s]+[\s]?', '', text)
         return text
