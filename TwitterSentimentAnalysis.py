@@ -54,6 +54,8 @@ def edit_text(text):
     text = EditText.remove_url(text)
     text = EditText.remove_mentions(text)
     text = EditText.remove_numbers_and_other_signs(text)
+    text = EditText.in_lower_case(text)
+    # text = EditText.translate_text(text) # translate in english if needed
     return text
 
 

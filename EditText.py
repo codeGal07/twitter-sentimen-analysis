@@ -1,4 +1,5 @@
 import re
+from googletrans import Translator
 
 class EditText:
     def change_unicode_sumniki_to_text(text):
@@ -89,4 +90,13 @@ class EditText:
 
     def in_lower_case(text):
         text = text.lower()
+        return text
+
+    def translate_text(text):
+        # translate text in english with google translate if it is in foreign language
+        translator = Translator()
+        try:
+            text = (translator.translate(text, src='sl', dest='en')).text
+        except:
+            pass
         return text
