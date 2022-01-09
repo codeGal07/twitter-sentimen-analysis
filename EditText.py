@@ -79,9 +79,14 @@ class EditText:
         return text
 
     def remove_numbers_and_other_signs(text):
+        # remove signs that have no meaning for analysis
         text = text.replace("b'", "")
         text = text.replace("RT ", "")
         text = re.sub('[\'?|.,():;>=<#$%&*+_}{1234567890]', '', text)
         text = text.replace("-", "")
         text = text.replace('\\n', " ")
+        return text
+
+    def in_lower_case(text):
+        text = text.lower()
         return text
