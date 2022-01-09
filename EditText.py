@@ -1,12 +1,14 @@
 class EditText:
     def edit_text_sumniki(text):
-        # šumniki in s
+        # šumniki converted in chars
         text = text.replace("\\xc5\\xa1", "š")
         text = text.replace("\\xc4\\x8d", "č")
         text = text.replace("\\xc5\\xbe", "ž")
         return text
 
+
     def edit_text_emoji(text):
+        # unicode emojis converted to words
         text = text.replace("\\xf0\\x9f\\x98\\x87", "smile ")
         text = text.replace("\\xf0\\x9F\\x98\\x88", "evil happy ")
         text = text.replace("\\xf0\\x9f\\x98\\x8e", "cool ")
